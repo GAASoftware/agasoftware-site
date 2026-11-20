@@ -108,7 +108,7 @@
 /* the guest's view of a QR menu, drawn live on a phone */
 .qr-phonef { min-height: 560px; }
 @media (min-width: 640px) and (max-width: 1023px) { .qr-phonef { min-height: 460px; } }
-.qr-phone { position: absolute; left: 50%; top: 48px; transform: translateX(-50%); width: 300px; padding: 10px; border-radius: 40px; background: #0b0c0e; box-shadow: 0 0 0 1px rgb(255 255 255 / .12), 0 40px 80px -30px rgb(0 0 0 / .8); }
+.qr-phone { position: absolute; left: 58%; top: 48px; transform: translateX(-50%); width: 300px; padding: 10px; border-radius: 40px; background: #0b0c0e; box-shadow: 0 0 0 1px rgb(255 255 255 / .12), 0 40px 80px -30px rgb(0 0 0 / .8); }
 .qr-screen { border-radius: 31px; background: #fbfaf7; color: #16181a; padding: 22px 18px 120px; font: 400 14px/1.4 var(--font-text); }
 .qr-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
 .qr-head b { font: 600 18px/1.2 var(--font-text); }
@@ -121,7 +121,14 @@
 .qr-item em { grid-row: 1; grid-column: 2; font-style: normal; font-variant-numeric: tabular-nums; font-weight: 600; }
 .qr-item.is-out b, .qr-item.is-out em { color: #a2a6ab; text-decoration: line-through; }
 .qr-item .qr-tag { grid-column: 2; justify-self: end; font-size: 12px; color: #a33a12; }
-@media (max-width: 639px) { .qr-phonef { min-height: 440px; } .qr-phone { width: 260px; top: 32px; } }
+/* the table number's back: the venue's QR code */
+.qr-table { position: absolute; left: 32px; bottom: 40px; z-index: 2; width: 180px; padding: 16px 16px 14px; border-radius: 14px; background: #fbfaf7; color: #111318; display: grid; gap: 10px; justify-items: center; box-shadow: 0 30px 60px -24px rgb(0 0 0 / .7); font-family: var(--font-text); }
+.qr-table__no { display: flex; align-items: baseline; gap: 6px; font: 600 28px/1 var(--font-text); }
+.qr-table__no small { font-size: 13px; font-weight: 500; color: #5b5f68; }
+.qr-table__code { width: 132px; padding: 6px; background: #fff; border-radius: 6px; } .qr-table__code svg { display: block; width: 100%; height: auto; }
+.qr-table__cta { font-size: 12px; color: #5b5f68; }
+@media (max-width: 1023px) { .qr-table { left: 20px; bottom: 24px; width: 150px; } .qr-table__code { width: 108px; } }
+@media (max-width: 639px) { .qr-phonef { min-height: 440px; } .qr-phone { width: 230px; top: 32px; left: 62%; } .qr-table { left: 12px; bottom: 20px; width: 128px; padding: 10px; gap: 6px; } .qr-table__no { font-size: 20px; } .qr-table__code { width: 92px; } }
 /* legal pages: one reading column */
 .legal-page .legal { padding: calc(var(--nav) + var(--s-9)) 0 var(--s-9); }
 .legal__body { max-width: 720px; }
